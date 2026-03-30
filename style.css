@@ -1,34 +1,36 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #fff8f5;
-  color: #333;
+  background: radial-gradient(circle, #2b0000, #000);
+  color: #f5e6c8;
+  overflow-x: hidden;
 }
 
-/* INTRO SCREEN */
+/* INTRO */
 #intro {
   height: 100vh;
-  background: linear-gradient(135deg, #ffe4e1, #fff);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: radial-gradient(circle, #3b0000, #000);
 }
 
 #intro h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  color: #b76e79;
+  font-size: 3.5rem;
+  color: gold;
+  text-shadow: 0 0 20px rgba(255,215,0,0.6);
 }
 
 #intro button {
   margin-top: 20px;
-  padding: 12px 25px;
+  padding: 12px 30px;
+  background: gold;
   border: none;
-  background: #b76e79;
-  color: white;
-  border-radius: 25px;
+  border-radius: 30px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 /* HERO */
@@ -38,12 +40,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #fff, #ffeaea);
 }
 
 .hero h1 {
   font-size: 3rem;
-  color: #b76e79;
+  color: gold;
+  text-shadow: 0 0 15px rgba(255,215,0,0.7);
 }
 
 /* SECTIONS */
@@ -52,18 +54,52 @@ section {
   text-align: center;
 }
 
-/* RSVP BUTTON */
-.rsvp a {
-  padding: 12px 25px;
-  background: #b76e79;
-  color: white;
-  text-decoration: none;
-  border-radius: 25px;
+/* GOLD DIVIDER */
+section::after {
+  content: "❁";
+  display: block;
+  margin-top: 30px;
+  font-size: 1.5rem;
+  color: gold;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
+/* RSVP */
+.rsvp a {
+  padding: 12px 25px;
+  background: gold;
+  color: black;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* PETALS */
+.petal {
+  position: fixed;
+  top: -10px;
+  width: 10px;
+  height: 10px;
+  background: pink;
+  opacity: 0.7;
+  border-radius: 50%;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+h1, h2 {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px gold;
+  }
+  to {
+    text-shadow: 0 0 25px gold, 0 0 40px orange;
   }
 }

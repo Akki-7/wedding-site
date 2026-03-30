@@ -2,8 +2,14 @@ AOS.init();
 
 // Enter animation
 function enterSite() {
-  document.getElementById("intro").style.display = "none";
-  document.getElementById("main-content").style.display = "block";
+  const intro = document.getElementById("intro");
+  intro.style.opacity = "0";
+
+  setTimeout(() => {
+    intro.style.display = "none";
+    document.getElementById("main-content").style.display = "block";
+    AOS.init();
+  }, 800);
 }
 
 // Countdown
@@ -19,3 +25,20 @@ setInterval(() => {
   document.getElementById("timer").innerHTML =
     `${days} days ${hours} hrs to go 💍`;
 }, 1000);
+
+// 🌸 Floating petals
+function createPetal() {
+  const petal = document.createElement("div");
+  petal.classList.add("petal");
+
+  petal.style.left = Math.random() * window.innerWidth + "px";
+  petal.style.animationDuration = (3 + Math.random() * 5) + "s";
+
+  document.body.appendChild(petal);
+
+  setTimeout(() => {
+    petal.remove();
+  }, 8000);
+}
+
+setInterval(createPetal, 300);
