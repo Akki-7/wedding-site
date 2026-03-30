@@ -1,8 +1,34 @@
 body {
   margin: 0;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
   background: #fff8f5;
   color: #333;
+}
+
+/* INTRO SCREEN */
+#intro {
+  height: 100vh;
+  background: linear-gradient(135deg, #ffe4e1, #fff);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#intro h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #b76e79;
+}
+
+#intro button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  background: #b76e79;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
 }
 
 /* HERO */
@@ -16,7 +42,7 @@ body {
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: #b76e79;
 }
 
@@ -26,11 +52,18 @@ section {
   text-align: center;
 }
 
-/* BUTTON */
+/* RSVP BUTTON */
 .rsvp a {
   padding: 12px 25px;
   background: #b76e79;
   color: white;
   text-decoration: none;
   border-radius: 25px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
 }

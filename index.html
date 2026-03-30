@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Wedding Invitation</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
-  <!-- AOS Animation -->
+  <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
@@ -16,39 +16,49 @@
 
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1 data-aos="fade-up">Akshay ❤️ [Partner]</h1>
-    <p data-aos="fade-up" data-aos-delay="300">We are getting married</p>
-  </section>
+  <!-- 🎬 INTRO SCREEN -->
+  <div id="intro">
+    <h1>Charmila ❤️ Nithesh</h1>
+    <button onclick="enterSite()">Enter Invitation</button>
+  </div>
 
-  <!-- STORY -->
-  <section class="story" data-aos="fade-right">
-    <h2>Our Story</h2>
-    <p>It all started with...</p>
-  </section>
+  <!-- 🌐 MAIN CONTENT -->
+  <div id="main-content" style="display:none;">
 
-  <!-- EVENT -->
-  <section class="event" data-aos="fade-left">
-    <h2>Wedding</h2>
-    <p>Dec 12, 2026</p>
-    <p>Hyderabad, India</p>
-  </section>
+    <!-- HERO -->
+    <section class="hero">
+      <h1 data-aos="fade-up">Charmila ❤️ Nithesh</h1>
+      <p data-aos="fade-up" data-aos-delay="300">We are getting married</p>
+    </section>
 
-  <!-- COUNTDOWN -->
-  <section class="countdown">
-    <h2 id="timer"></h2>
-  </section>
+    <!-- STORY -->
+    <section class="story" data-aos="fade-right">
+      <h2>Our Story</h2>
+      <p>It all started with a simple hello… and turned into forever 💫</p>
+    </section>
 
-  <!-- RSVP -->
-  <section class="rsvp" data-aos="zoom-in">
-    <a href="#">RSVP Now</a>
-  </section>
+    <!-- EVENT -->
+    <section class="event" data-aos="fade-left">
+      <h2>Wedding</h2>
+      <p>April 30, 2026</p>
+      <p>Bobbili, India</p>
+    </section>
 
+    <!-- COUNTDOWN -->
+    <section class="countdown">
+      <h2 id="timer"></h2>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp" data-aos="zoom-in">
+      <a href="https://wa.me/91XXXXXXXXXX">RSVP Now</a>
+    </section>
+
+  </div>
+
+  <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
 
 </body>
 </html>
-
-
