@@ -1,31 +1,19 @@
-// INTRO TRANSITION
-function enterSite() {
-  const intro = document.getElementById("intro");
+// SCROLL ANIMATION
+const sections = document.querySelectorAll(".section");
 
-  intro.style.transition = "opacity 0.8s ease";
-  intro.style.opacity = "0";
+window.addEventListener("scroll", () => {
+  const trigger = window.innerHeight * 0.8;
 
-  setTimeout(() => {
-    intro.style.display = "none";
-    document.getElementById("main-content").style.display = "block";
-  }, 800);
-}
+  sections.forEach((section) => {
+    const top = section.getBoundingClientRect().top;
 
-// COUNTDOWN
-const weddingDate = new Date(2026, 3, 30).getTime();
+    if (top < trigger) {
+      section.style.opacity = "1";
+      section.style.transform = "translateY(0)";
+    } else {
+      section.style.opacity = "0";
+      section.style.transform = "translateY(50px)";
+    }
+  });
+});
 
-setInterval(() => {
-  const now = new Date().getTime();
-  const diff = weddingDate - now;
-
-  if (diff <= 0) {
-    document.getElementById("timer").innerHTML = "Wedding Day";
-    return;
-  }
-
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-
-  document.getElementById("timer").innerHTML =
-    `${days} days ${hours} hrs to go`;
-}, 1000);
