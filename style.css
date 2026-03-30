@@ -33,23 +33,6 @@ html {
   cursor: pointer;
 }
 
-/* HERO */
-.hero {
-  height: 100vh;
-  background: url("https://images.unsplash.com/photo-1520854221256-17451cc331bf") no-repeat center/cover;
-  position: relative;
-}
-
-.overlay {
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: gold;
-  text-align: center;
-}
 
 /* SECTIONS */
 section {
@@ -70,4 +53,83 @@ section {
 .venue a:hover {
   transform: scale(1.1);
   box-shadow: 0 0 20px gold;
+}
+
+.hero {
+  height: 100vh;
+  background: url("bg.jpg") no-repeat center/cover;
+  position: relative;
+}
+
+/* TEXT OVER IMAGE */
+.overlay {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  color: #3b2f2f;
+  padding: 0 20px;
+}
+
+/* NAMES */
+.overlay h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #6b4f3b;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.tagline {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* DATE */
+.date {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* PLACE */
+.place {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* existing styles above... */
+
+
+/* 📱 MOBILE RESPONSIVE FIX */
+@media (max-width: 768px) {
+  .overlay h1 {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+}
+
+.overlay {
+  animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.overlay h1,
+.tagline,
+.date,
+.place {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
