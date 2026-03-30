@@ -1,3 +1,4 @@
+// INTRO TRANSITION
 function enterSite() {
   const intro = document.getElementById("intro");
 
@@ -10,7 +11,7 @@ function enterSite() {
   }, 800);
 }
 
-// COUNTDOWN FIX
+// COUNTDOWN
 const weddingDate = new Date(2026, 3, 30).getTime();
 
 setInterval(() => {
@@ -18,7 +19,7 @@ setInterval(() => {
   const diff = weddingDate - now;
 
   if (diff <= 0) {
-    document.getElementById("timer").innerHTML = "💍 It's Wedding Day!";
+    document.getElementById("timer").innerHTML = "Wedding Day";
     return;
   }
 
@@ -26,5 +27,5 @@ setInterval(() => {
   const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
 
   document.getElementById("timer").innerHTML =
-    `${days} days ${hours} hrs to go 💫`;
+    `${days} days ${hours} hrs to go`;
 }, 1000);

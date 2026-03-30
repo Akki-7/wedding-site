@@ -1,249 +1,134 @@
-/* -----------------------------
-   RESET + BASE
------------------------------- */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: 'Poppins', sans-serif;
-  background: #0f0f0f;
-  color: #222;
-  overflow-x: hidden;
+  background: #ffffff;
+  color: #111;
 }
 
 /* -----------------------------
-   INTRO (Clean + Minimal)
+   INTRO (TOP LEFT)
 ------------------------------ */
 #intro {
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #0f0f0f;
-  color: #fff;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 60px;
 }
 
-#intro h1 {
+.intro-content {
+  max-width: 400px;
+  animation: fadeUp 1.2s ease forwards;
+  opacity: 0;
+}
+
+.intro-names {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
-  letter-spacing: 1px;
+}
+
+.intro-line {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #555;
 }
 
 #intro button {
-  margin-top: 20px;
-  padding: 10px 24px;
+  margin-top: 25px;
+  padding: 10px 22px;
   border-radius: 999px;
-  border: 1px solid #fff;
+  border: 1px solid #111;
   background: transparent;
-  color: #fff;
+  color: #111;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 #intro button:hover {
-  background: #fff;
-  color: #000;
+  background: #111;
+  color: #fff;
 }
 
 /* -----------------------------
-   HERO (Image + Cinematic Zoom)
+   HERO
 ------------------------------ */
 .hero {
   height: 100vh;
-  background: url("bg.jpg") no-repeat center/cover;
   position: relative;
-  animation: zoomBg 20s ease-in-out infinite alternate;
+  padding: 60px;
 }
 
-@keyframes zoomBg {
-  from {
-    background-size: 100%;
-  }
-  to {
-    background-size: 110%;
-  }
+.hero-text {
+  max-width: 500px;
 }
 
-/* -----------------------------
-   OVERLAY (Glass Effect)
------------------------------- */
-.overlay {
-  position: absolute;
-  top: 12%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-
-  padding: 40px 20px;
-
-  animation: fadeUp 1.2s ease forwards;
-  opacity: 0;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* -----------------------------
-   TEXT STYLING
------------------------------- */
-
-/* Names */
+/* TEXT */
 .names {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
-  letter-spacing: 1px;
-  color: #2d2d2d;
 }
 
-/* Tagline */
 .tagline {
   margin-top: 20px;
   font-size: 1rem;
   line-height: 1.7;
-  max-width: 520px;
   color: #444;
 }
 
-/* Date + Place */
 .meta {
   margin-top: 15px;
-  font-size: 0.95rem;
-  letter-spacing: 1px;
-  color: #666;
+  font-size: 0.9rem;
+  color: #777;
 }
 
 /* -----------------------------
-   SECTIONS (Clean spacing)
+   SECTIONS
 ------------------------------ */
 section {
-  padding: 100px 20px;
-  text-align: center;
+  padding: 100px 60px;
 }
 
-/* -----------------------------
-   VENUE BUTTON (Modern Minimal)
------------------------------- */
+/* STORY */
+.story h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+}
+
+.story p {
+  color: #555;
+}
+
+/* COUNTDOWN */
+.countdown h2 {
+  font-size: 1.4rem;
+}
+
+/* VENUE */
 .venue a {
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 20px;
   padding: 10px 22px;
   border-radius: 999px;
-  border: 1px solid #333;
-  background: rgba(255,255,255,0.6);
-  backdrop-filter: blur(8px);
+  border: 1px solid #111;
   text-decoration: none;
-  color: #222;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
+  color: #111;
+  transition: 0.3s;
 }
 
 .venue a:hover {
-  background: #222;
+  background: #111;
   color: #fff;
 }
 
 /* -----------------------------
-   COUNTDOWN
+   ANIMATION
 ------------------------------ */
-.countdown h2 {
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-  color: #333;
-}
-
-/* -----------------------------
-   MOBILE (Refined)
------------------------------- */
-@media (max-width: 768px) {
-
-  .overlay {
-    top: 8%;
-    padding: 20px;
-  }
-
-  .tagline {
-    font-size: 0.9rem;
-  }
-
-  .meta {
-    font-size: 0.85rem;
-  }
-}
-
-/* -----------------------------
-   INTRO - WHITE PREMIUM
------------------------------- */
-#intro {
-  height: 100vh;
-  background: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Container */
-.intro-content {
-  text-align: center;
-  animation: fadeUp 1.2s ease forwards;
-  opacity: 0;
-}
-
-/* Names */
-.intro-names {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  color: #1a1a1a;
-  letter-spacing: 1px;
-}
-
-/* Subtitle */
-.intro-line {
-  margin-top: 10px;
-  font-size: 1rem;
-  color: #777;
-  letter-spacing: 1px;
-}
-
-/* Button */
-#intro button {
-  margin-top: 30px;
-  padding: 12px 28px;
-  border-radius: 999px;
-  border: 1px solid #222;
-  background: transparent;
-  color: #222;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#intro button:hover {
-  background: #222;
-  color: #fff;
-}
-
-/* Animation */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -252,5 +137,23 @@ section {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* -----------------------------
+   MOBILE
+------------------------------ */
+@media (max-width: 768px) {
+
+  #intro {
+    padding: 30px;
+  }
+
+  .hero {
+    padding: 30px;
+  }
+
+  section {
+    padding: 80px 30px;
   }
 }
