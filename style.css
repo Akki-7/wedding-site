@@ -167,3 +167,51 @@ section,
   background: #ffffff !important;
   color: #000000 !important;
 }
+
+/* -----------------------------
+   BOTTOM RIGHT IMAGE
+------------------------------ */
+.corner-image {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  width: 320px;
+  max-width: 40vw;
+
+  opacity: 0.9;
+  pointer-events: none; /* prevents blocking clicks */
+
+  animation: fadeInImage 1.5s ease forwards;
+}
+
+/* Smooth entry */
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .corner-image {
+    width: 200px;
+    opacity: 0.7;
+  }
+}
+.corner-image {
+  animation: floatImage 6s ease-in-out infinite alternate;
+}
+
+@keyframes floatImage {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
