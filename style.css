@@ -123,3 +123,38 @@ section {
   transform: scale(1.05);
   box-shadow: 0 0 20px gold;
 }
+
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1520854221256-17451cc331bf") no-repeat center/cover;
+  position: relative;
+}
+
+.overlay {
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: gold;
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btn {
+  background: gold;
+  padding: 12px 30px;
+  border-radius: 30px;
+  color: black;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px gold;
+}

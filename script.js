@@ -10,10 +10,11 @@ function enterSite() {
     intro.style.display = "none";
     document.getElementById("main-content").style.display = "block";
 
-    AOS.init({
-      duration: 1200,
-      once: true
-    });
+   AOS.init({
+  duration: 1400,
+  once: true,
+  easing: 'ease-in-out'
+});
   }, 1000);
 }
 
