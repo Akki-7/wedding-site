@@ -1,81 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wedding Invitation</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Charmila ❤️ Nithesh</title>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400&display=swap"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-    <!-- 🎬 INTRO SCREEN -->
-    <div id="intro">
-        <h1>Charmila ❤️ Nithesh</h1>
-        <button onclick="enterSite()">Enter Invitation</button>
-    </div>
+<!-- 🎬 INTRO -->
+<div id="intro">
+  <h1>Charmila ❤️ Nithesh</h1>
+  <button onclick="enterSite()">Enter</button>
+</div>
 
-    <!-- 🌐 MAIN CONTENT -->
-    <div id="main-content" style="display:none;">
+<div id="main-content">
 
-        <!-- HERO -->
-        <section class="hero">
-            <div class="overlay">
-                <h1 data-aos="zoom-in">Charmila ❤️ Nithesh</h1>
-                <p data-aos="fade-up">April 30, 2026 • Bobbili</p>
-            </div>
-        </section>
+<!-- 🌆 HERO -->
+<section class="hero">
+  <div class="overlay">
+    <h1 data-aos="zoom-in">Charmila ❤️ Nithesh</h1>
+    <p data-aos="fade-up">April 30, 2026 • Bobbili</p>
+  </div>
+</section>
 
-        <!-- STORY -->
-        <section class="story" data-aos="fade-right">
-            <h2>Our Journey</h2>
-            <p>
-                Together with their families,<br>
-                request the honor of your presence<br>
-                to celebrate their wedding
-            </p>
-        </section>
+<!-- 💫 STORY -->
+<section class="story" data-aos="fade-up">
+  <h2>Our Story</h2>
+  <p>
+    Together with their families,<br>
+    invite you to celebrate their wedding.<br>
+    A journey that began with a hello<br>
+    and continues forever 💫
+  </p>
+</section>
 
-        <!-- EVENT -->
-        <section class="event" data-aos="fade-left">
-            <h2>The Wedding</h2>
-            <p>April 30, 2026</p>
-            <p>Surya Residency, Railway station road,</p>
+<!-- 💍 EVENT -->
+<section class="event" data-aos="fade-up">
+  <h2>The Wedding</h2>
+  <p>April 30, 2026</p>
+   <p>Surya Residency, Railway station road,</p>
             <p>Bobbili, Andhra Pradesh,</p>
             <p>India 535558</p>
-        </section>
+</section>
 
-        <!-- COUNTDOWN -->
-        <section class="countdown">
-            <h2 id="timer"></h2>
-        </section>
+<!-- ⏳ COUNTDOWN -->
+<section class="countdown">
+  <h2 id="timer"></h2>
+</section>
 
-        <!-- RSVP -->
-        <section class="rsvp" data-aos="zoom-in">
-           <a class="btn" href="https://maps.app.goo.gl/ZGzabn4UBXL36z3i6" target="_blank">
-  View Venue 📍
-</a>
-        </section>
+<!-- 📍 VENUE -->
+<section class="venue" data-aos="zoom-in">
+  <a href="https://maps.app.goo.gl/ZGzabn4UBXL36z3i6" target="_blank">
+    View Venue 📍
+  </a>
+</section>
 
-    </div>
+</div>
 
-    <!-- AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
 
-    <button onclick="playMusic()">Play Music 🎵</button>
-    <audio id="bg-music" loop>
-        <source src="music.mp3" type="audio/mp3">
-    </audio>
 </body>
-
 </html>

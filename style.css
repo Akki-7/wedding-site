@@ -1,9 +1,12 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: radial-gradient(circle, #2b0000, #000);
-  color: #f5e6c8;
-  overflow-x: hidden;
+  background: black;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* INTRO */
@@ -13,117 +16,24 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(circle, #3b0000, #000);
+  background: black;
 }
 
 #intro h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: gold;
-  text-shadow: 0 0 20px rgba(255,215,0,0.6);
 }
 
 #intro button {
-  margin-top: 20px;
-  padding: 12px 30px;
+  padding: 10px 25px;
   background: gold;
   border: none;
-  border-radius: 30px;
+  border-radius: 25px;
   cursor: pointer;
-  font-weight: bold;
 }
 
 /* HERO */
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  color: gold;
-  text-shadow: 0 0 15px rgba(255,215,0,0.7);
-}
-
-/* SECTIONS */
-section {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-/* GOLD DIVIDER */
-section::after {
-  content: "❁";
-  display: block;
-  margin-top: 30px;
-  font-size: 1.5rem;
-  color: gold;
-}
-
-/* RSVP */
-.rsvp a {
-  padding: 12px 25px;
-  background: gold;
-  color: black;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* PETALS */
-.petal {
-  position: fixed;
-  top: -10px;
-  width: 10px;
-  height: 10px;
-  background: pink;
-  opacity: 0.7;
-  border-radius: 50%;
-  animation: fall linear infinite;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(110vh) rotate(360deg);
-  }
-}
-
-h1, h2 {
-  animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px gold;
-  }
-  to {
-    text-shadow: 0 0 25px gold, 0 0 40px orange;
-  }
-}
-
-/* Smooth fade for intro */
-#intro {
-  transition: opacity 1s ease;
-}
-
-/* Section animation spacing */
-section {
-  padding: 100px 20px;
-}
-
-/* Button hover glow */
-.rsvp a {
-  transition: all 0.3s ease;
-}
-
-.rsvp a:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px gold;
-}
-
 .hero {
   height: 100vh;
   background: url("https://images.unsplash.com/photo-1520854221256-17451cc331bf") no-repeat center/cover;
@@ -132,7 +42,7 @@ section {
 
 .overlay {
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.6);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -141,20 +51,23 @@ section {
   text-align: center;
 }
 
-html {
-  scroll-behavior: smooth;
+/* SECTIONS */
+section {
+  padding: 100px 20px;
+  text-align: center;
 }
 
-.btn {
-  background: gold;
+/* BUTTON */
+.venue a {
   padding: 12px 30px;
-  border-radius: 30px;
+  background: gold;
   color: black;
+  border-radius: 30px;
   text-decoration: none;
   transition: 0.3s;
 }
 
-.btn:hover {
+.venue a:hover {
   transform: scale(1.1);
   box-shadow: 0 0 20px gold;
 }
