@@ -103,3 +103,23 @@ h1, h2 {
     text-shadow: 0 0 25px gold, 0 0 40px orange;
   }
 }
+
+/* Smooth fade for intro */
+#intro {
+  transition: opacity 1s ease;
+}
+
+/* Section animation spacing */
+section {
+  padding: 100px 20px;
+}
+
+/* Button hover glow */
+.rsvp a {
+  transition: all 0.3s ease;
+}
+
+.rsvp a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px gold;
+}
