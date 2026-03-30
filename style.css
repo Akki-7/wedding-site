@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background: #fff8f5;
+  color: #333;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #fff, #ffeaea);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  color: #b76e79;
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* BUTTON */
+.rsvp a {
+  padding: 12px 25px;
+  background: #b76e79;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+}
