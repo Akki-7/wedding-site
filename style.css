@@ -190,3 +190,67 @@ section {
     font-size: 0.85rem;
   }
 }
+
+/* -----------------------------
+   INTRO - WHITE PREMIUM
+------------------------------ */
+#intro {
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container */
+.intro-content {
+  text-align: center;
+  animation: fadeUp 1.2s ease forwards;
+  opacity: 0;
+}
+
+/* Names */
+.intro-names {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: #1a1a1a;
+  letter-spacing: 1px;
+}
+
+/* Subtitle */
+.intro-line {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #777;
+  letter-spacing: 1px;
+}
+
+/* Button */
+#intro button {
+  margin-top: 30px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  border: 1px solid #222;
+  background: transparent;
+  color: #222;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#intro button:hover {
+  background: #222;
+  color: #fff;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

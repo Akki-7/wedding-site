@@ -1,11 +1,13 @@
 function enterSite() {
-  document.getElementById("intro").style.display = "none";
-  document.getElementById("main-content").style.display = "block";
+  const intro = document.getElementById("intro");
 
-  AOS.init({
-    duration: 1400,
-    once: true
-  });
+  intro.style.transition = "opacity 0.8s ease";
+  intro.style.opacity = "0";
+
+  setTimeout(() => {
+    intro.style.display = "none";
+    document.getElementById("main-content").style.display = "block";
+  }, 800);
 }
 
 // COUNTDOWN FIX
