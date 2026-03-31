@@ -1,15 +1,27 @@
-// INTRO TRANSITION
+// ENTER TRANSITION
 function enterSite() {
   const intro = document.getElementById("intro");
-
-  intro.style.transition = "opacity 0.8s ease";
   intro.style.opacity = "0";
 
   setTimeout(() => {
     intro.style.display = "none";
-    document.getElementById("main-content").style.display = "block";
   }, 800);
 }
+
+// SCROLL ANIMATION
+const elements = document.querySelectorAll(".fade");
+
+window.addEventListener("scroll", () => {
+  const trigger = window.innerHeight * 0.85;
+
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+
+    if (top < trigger) {
+      el.classList.add("visible");
+    }
+  });
+});
 
 // COUNTDOWN
 const weddingDate = new Date(2026, 3, 30).getTime();

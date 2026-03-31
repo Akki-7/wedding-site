@@ -6,56 +6,48 @@
   <title>Charmila & Nithesh</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<!-- 🎬 INTRO -->
+<!-- INTRO -->
 <div id="intro">
   <div class="intro-content">
-    <h1 class="intro-names">Charmila & Nithesh</h1>
-    <p class="intro-line">are getting married</p>
+    <h1>Charmila & Nithesh</h1>
+    <p>are getting married</p>
     <button onclick="enterSite()">View Invitation</button>
   </div>
 </div>
 
-<!-- 🌐 MAIN -->
-<div id="main-content">
+<!-- FIXED CANVAS -->
+<div class="fixed-bg"></div>
 
-  <!-- HERO TEXT (TOP LEFT) -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1 class="names">Charmila & Nithesh</h1>
+<!-- FLOATING IMAGE -->
+<img src="couple.png" class="corner-image" />
 
-      <p class="tagline">
-        Together with their families,<br>
-        request the honor of your presence<br>
-        to celebrate their wedding
-      </p>
+<!-- GRAIN -->
+<div class="grain"></div>
 
-      <p class="meta">April 30, 2026 · Bobbili</p>
-    </div>
+<!-- SCROLL STORY -->
+<div class="scroll-container">
+
+  <section class="panel">
+    <h1 class="fade">Charmila & Nithesh</h1>
+    <p class="fade delay">request the honor of your presence</p>
   </section>
 
-  <!-- STORY -->
-  <section class="story">
-    <h2>Our Story</h2>
-    <p>
-      A simple hello turned into something timeless.<br>
-      A journey of love, laughter, and forever.
-    </p>
+  <section class="panel">
+    <h2 class="fade">April 30, 2026</h2>
+    <p class="fade delay">Bobbili</p>
   </section>
 
-  <!-- COUNTDOWN -->
-  <section class="countdown">
-    <h2 id="timer"></h2>
+  <section class="panel">
+    <h2 id="timer" class="fade"></h2>
   </section>
 
-  <!-- VENUE -->
-  <section class="venue">
-    <a href="https://maps.app.goo.gl/ZGzabn4UBXL36z3i6" target="_blank">
+  <section class="panel">
+    <a href="https://maps.app.goo.gl/ZGzabn4UBXL36z3i6" target="_blank" class="btn fade">
       View Venue
     </a>
   </section>
@@ -63,6 +55,6 @@
 </div>
 
 <script src="script.js"></script>
-<img src="couple.png" class="corner-image" />
+
 </body>
 </html>
