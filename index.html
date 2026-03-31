@@ -132,24 +132,17 @@
                             <p class="seconds_text">Seconds</p>
                         </li>
                     </ul>
-                    <div class="spasi">
-                    </div>
-                    <script type="text/javascript">
-                        var now = new Date();
-                        var day = now.getDate();
-                        var month = now.getMonth() + 1;
-                        var year = now.getFullYear() + 1;
 
-                        var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
-                        var harih = '04/30/2026 19:49:00';
+                    <script type="text/javascript">
+                        var weddingDate = '04/30/2026 19:49:00';
 
                         $('#hitungmundur').countdown({
-                            date: harih, // TODO Date format: 07/27/2017 17:00:00
-                            offset: +7, // TODO Your Timezone Offset
-                            day: 'Hari',
-                            days: 'Hari'
+                            date: weddingDate,
+                            offset: +5.5, // India timezone (IST)
+                            day: 'Day',
+                            days: 'Days'
                         }, function () {
-                            alert('Done!');
+                            document.getElementById("hitungmundur").innerHTML = "Wedding Day 💍";
                         });
                     </script>
                 </div>
@@ -288,14 +281,15 @@
                     </p>
                 </div>
                 <div class="section-map" data-aos="fade-up" data-aos-easing="linear">
-                    <iframe src="https://maps.app.goo.gl/A68wyQywEhaZzUpk8" width="100%" height="450" frameborder="0"
-                        style="border:0;" allowfullscreen=""></iframe>
+                    <iframe src="https://www.google.com/maps?q=17.8875,83.3833&output=embed" width="100%" height="450"
+                        style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
                 </div>
                 <div class="space40px"></div>
                 <div class="has-text-centered" data-aos="fade-up" data-aos-easing="linear">
                     <a href="https://maps.app.goo.gl/A68wyQywEhaZzUpk8" class="button btn-cta" target="_blank"
                         data-aos="zoom-in">
-                        <i class="far fa-directions"></i>
+                        <i class="fas fa-map-marker-alt"></i>
                         &nbsp;&nbsp;Google Maps
                     </a>
                 </div>
