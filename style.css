@@ -1,15 +1,7 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   background: #ffffff;
   color: #111;
   font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
 }
 
 /* INTRO */
@@ -25,33 +17,7 @@ body {
   opacity: 0;
 }
 
-#intro h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-}
-
-#intro button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: 1px solid #111;
-  background: none;
-  cursor: pointer;
-}
-
-/* FIXED BG */
-.fixed-bg {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background: #fff;
-  z-index: -1;
-}
-
-/* SCROLL PANELS */
-.scroll-container {
-  position: relative;
-}
-
+/* PANELS */
 .panel {
   height: 100vh;
   display: flex;
@@ -67,10 +33,8 @@ h1, h2 {
 
 /* BUTTON */
 .btn {
-  margin-top: 20px;
-  display: inline-block;
-  padding: 10px 20px;
   border: 1px solid #111;
+  padding: 10px 20px;
   text-decoration: none;
   color: #111;
 }
@@ -82,21 +46,13 @@ h1, h2 {
   right: 0;
   width: 300px;
   opacity: 0.9;
-  pointer-events: none;
-  animation: float 6s ease-in-out infinite alternate;
 }
 
-/* FLOAT */
-@keyframes float {
-  from { transform: translateY(0); }
-  to { transform: translateY(-15px); }
-}
-
-/* FADE TEXT */
+/* ANIMATION */
 .fade {
   opacity: 0;
   transform: translateY(30px);
-  transition: 0.8s ease;
+  transition: 0.8s;
 }
 
 .fade.visible {
@@ -104,27 +60,9 @@ h1, h2 {
   transform: translateY(0);
 }
 
-/* INTRO ANIMATION */
 @keyframes fadeUp {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-/* GRAIN */
-.grain {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  background: url("https://grainy-gradients.vercel.app/noise.svg");
-  opacity: 0.04;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .corner-image {
-    width: 180px;
   }
 }
