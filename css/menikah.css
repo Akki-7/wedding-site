@@ -667,3 +667,32 @@ body.preloader-site {
   text-align: center;
   padding: 10px;
 }
+
+/* CENTER LAYOUT */
+.center-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* DATE BLOCK */
+.date-block {
+  text-align: center;
+}
+
+/* TIME BLOCK */
+.time-block {
+  text-align: center;
+}
+
+/* BIG DATE NUMBER */
+.tanggal-angka {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+/* CLEAN SPACING */
+.section-dark {
+  padding: 100px 20px;
+}
