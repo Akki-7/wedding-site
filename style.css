@@ -1,7 +1,31 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: #ffffff;
   color: #111;
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* SCROLL SNAP (APPLE FEEL) */
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.panel {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
 }
 
 /* INTRO */
@@ -13,17 +37,8 @@ body {
 }
 
 .intro-content {
-  animation: fadeUp 1s ease forwards;
   opacity: 0;
-}
-
-/* PANELS */
-.panel {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 60px;
+  animation: fadeUp 1s ease forwards;
 }
 
 /* TEXT */
@@ -37,32 +52,53 @@ h1, h2 {
   padding: 10px 20px;
   text-decoration: none;
   color: #111;
+  margin-top: 20px;
 }
 
-/* IMAGE */
+/* FLOATING IMAGE */
 .corner-image {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 300px;
-  opacity: 0.9;
+  width: 320px;
+  pointer-events: none;
+  animation: float 6s ease-in-out infinite alternate;
 }
 
-/* ANIMATION */
-.fade {
+/* FLOAT ANIMATION */
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
+
+/* TEXT REVEAL */
+.reveal-text {
   opacity: 0;
   transform: translateY(30px);
-  transition: 0.8s;
+  transition: all 0.8s ease;
 }
 
-.fade.visible {
+.reveal-text.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* DELAY */
+.delay {
+  transition-delay: 0.2s;
+}
+
+/* INTRO FADE */
 @keyframes fadeUp {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .corner-image {
+    width: 180px;
   }
 }
